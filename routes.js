@@ -12,4 +12,6 @@ module.exports = function (app) {
   app.route("/add").post(myjson.addMahasiswa);
 
   app.route("/update").put(myjson.changeMahasiswa);
+
+  app.route("/delete").delete(myjson.deleteMahasiswa);
 };
