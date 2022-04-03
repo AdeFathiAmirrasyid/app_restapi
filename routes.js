@@ -1,17 +1,15 @@
-'use strict';
+"use strict";
 
-module.exports = function(app){
-  var myjson = require('./controller');
+module.exports = function (app) {
+  var myjson = require("./controller");
 
-  app.route('/')
-    .get(myjson.index);
+  app.route("/").get(myjson.index);
 
-  app.route('/show')
-    .get(myjson.show_mahasiswa);
+  app.route("/show").get(myjson.show_mahasiswa);
 
-  app.route('/show/:id')
-    .get(myjson.show_mahasiswa);
+  app.route("/show/:id").get(myjson.show_mahasiswa);
 
-  app.route('/add')
-    .post(myjson.addMahasiswa);
-}
+  app.route("/add").post(myjson.addMahasiswa);
+
+  app.route("/update").put(myjson.changeMahasiswa);
+};
