@@ -19,7 +19,7 @@ exports.show_mahasiswa = function (req, res) {
 };
 
 //menampilkan semua data mahasiswa berdasarkan id
-exports.show_mahasiswa = function (req, res) {
+exports.show_mahasiswaId = function (req, res) {
   let id = req.params.id;
   connection.query(
     "SELECT * FROM mahasiswa WHERE id_mahasiswa = ? ",
